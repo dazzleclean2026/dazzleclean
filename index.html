@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DAZZLE CLEAN - Professional Cleaning Services for House, Car & Two Wheeler in Ernakulam. Doorstep service with affordable pricing.">
+    <meta name="keywords" content="cleaning services, house cleaning, car cleaning, two wheeler cleaning, Ernakulam">
+    <meta name="author" content="DAZZLE CLEAN">
+    <title>DAZZLE CLEAN - Professional Cleaning Services | Ernakulam</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="tailwind_3_4_17.js"></script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        /* Modern Color Palette */
+        :root {
+            --primary: #00D9FF;
+            --primary-dark: #00B8D4;
+            --accent: #FF006E;
+            --accent-light: #FB5607;
+            --secondary: #6A5ACD;
+            --dark-bg: #0F1419;
+            --light-bg: #F8F9FA;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #001F3F 0%, #0D47A1 50%, #00B4DB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.2) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 0, 110, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .primary-gradient {
+            background: linear-gradient(135deg, #00D9FF 0%, #0099CC 50%, #6A5ACD 100%);
+            background-size: 200% 200%;
+            animation: gradient-shift 6s ease infinite;
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(135deg, #FF006E 0%, #FB5607 100%);
+        }
+        
+        .svg-pattern {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 600px;
+            height: 600px;
+            opacity: 0.15;
+            z-index: 1;
+            mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 1) 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 1) 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .service-card {
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1), box-shadow 0.4s ease, background 0.3s ease;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            transform: translate(100px, -100px);
+            transition: transform 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-16px);
+            box-shadow: 0 30px 60px rgba(0, 217, 255, 0.25);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 249, 250, 1) 100%);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+        
+        .service-card:hover::before {
+            transform: translate(50px, -50px);
+        }
+        
+        .feature-box {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            position: relative;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-12px) scale(1.02);
+        }
+        
+        .feature-icon {
+            transition: all 0.4s ease;
+        }
+        
+        .feature-box:hover .feature-icon {
+            transform: rotateY(360deg) scale(1.1);
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366 0%, #1a9e52 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            text-decoration: none;
+            animation: pulse-float 2.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.15) translateY(-10px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00D9FF 0%, #0099CC 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+            margin: 0 auto 16px;
+            box-shadow: 0 8px 20px rgba(0, 217, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .step-number::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, #00D9FF 0%, #FF006E 100%);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #00D9FF 0%, #0099CC 100%);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            position: relative;
+            overflow: hidden;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
+        }
+        
+        .btn-secondary {
+            border: 2.5px solid #00D9FF;
+            color: #00D9FF;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: #00D9FF;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+            z-index: -1;
+        }
+        
+        .btn-secondary:hover {
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.3);
+        }
+        
+        .btn-secondary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00D9FF, #FF006E);
+            animation: expand-line 0.8s ease forwards;
+        }
+        
+        @keyframes expand-line {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.99);
+            box-shadow: 0 4px 30px rgba(0, 217, 255, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            color: #1a2332;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00D9FF, #0099CC);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #00D9FF;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .contact-card {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-12px);
+            background: rgba(255, 255, 255, 0.25) !important;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        .floating-call {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #FF006E 0%, #FB5607 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 998;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(255, 0, 110, 0.5);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            text-decoration: none;
+            animation: pulse-float-call 2.8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-float-call {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .floating-call:hover {
+            transform: scale(1.2) translateY(-15px);
+            box-shadow: 0 12px 40px rgba(255, 0, 110, 0.8);
+        }
+        
+        .floating-whatsapp-new {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #25D366 0%, #1a9e52 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            text-decoration: none;
+            animation: pulse-float 2.5s ease-in-out infinite;
+        }
+        
+        .floating-whatsapp-new:hover {
+            transform: scale(1.2) translateY(-15px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Floating WhatsApp Button (New) -->
+    <a href="https://wa.me/919744718332" target="_blank" class="floating-whatsapp-new hidden md:hidden" id="floatingWhatsappNew">
+        <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3.01 1.01 4.32L2 22l5.89-1.01C9.26 21.67 10.59 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.74-.36-3.88-.99l-.28-.15-2.89.49.49-2.89-.15-.28C4.36 14.74 4 13.41 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm3.53-12.78l-.56-1.45c-.18-.46-.64-.59-1.09-.59-.45 0-.91.13-1.25.62-.34.49-.13 1.15.21 1.6l.15.19c.34.44.85.72 1.40.77.55.05 1.05-.17 1.45-.62l.19-.15c.34-.34.55-.80.44-1.27zm-3.03 5.22c-.55.06-1.09-.17-1.48-.62-.39-.45-.55-.97-.44-1.49.11-.52.56-.93 1.12-.99.56-.06 1.10.17 1.49.62.39.45.56.97.45 1.49-.11.52-.57.93-1.13.99z"/>
+        </svg>
+    </a>
+    
+    <!-- Floating Call Button -->
+    <a href="tel:9744718332" class="floating-call hidden md:hidden" id="floatingCall">
+        <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+    </a>
+
+    <!-- Navigation/Header -->
+    <header class="sticky top-0 z-50" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="assets/logo.png" alt="DAZZLE CLEAN" class="w-12 h-12 rounded-full group-hover:shadow-lg transition">
+                <span class="text-xl font-black bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent whitespace-nowrap">DAZZLE CLEAN</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="tel:9744718332" class="hidden md:inline-block btn-primary text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition">
+                📞 Call Now
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- SVG Pattern Background -->
+        <svg class="svg-pattern" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="20" cy="20" r="3" fill="#00D9FF"/>
+                </pattern>
+                <pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00D9FF" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <!-- Circles Pattern -->
+            <circle cx="100" cy="100" r="150" fill="none" stroke="#00D9FF" stroke-width="2" opacity="0.3"/>
+            <circle cx="100" cy="100" r="100" fill="none" stroke="#0099CC" stroke-width="2" opacity="0.2"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#6A5ACD" stroke-width="2" opacity="0.3"/>
+            <!-- Dots Pattern -->
+            <rect width="400" height="400" fill="url(#dots)"/>
+            <!-- Grid Pattern -->
+            <rect width="400" height="400" fill="url(#grid)"/>
+            <!-- Decorative Lines -->
+            <line x1="0" y1="200" x2="400" y2="200" stroke="#00D9FF" stroke-width="1" opacity="0.2"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="#00D9FF" stroke-width="1" opacity="0.2"/>
+        </svg>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-screen md:min-h-auto">
+                <!-- Left Content -->
+                <div class="flex flex-col justify-center space-y-6">
+                    <div class="space-y-3 animate-fadeInUp">
+                        <div class="inline-block">
+                            <span class="bg-cyan-400 bg-opacity-30 text-cyan-200 px-4 py-3 rounded-full text-sm font-bold border border-cyan-300 border-opacity-50">⚡ Professional Cleaning Excellence</span>
+                        </div>
+                        <h2 class="text-5xl md:text-7xl font-black text-white leading-tight drop-shadow-xl">
+                            <span class="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">DAZZLE CLEAN</span>
+                        </h2>
+                    </div>
+                    
+                    <p class="text-lg md:text-2xl text-cyan-100 font-bold leading-relaxed drop-shadow-lg">
+                        Transform Your Space Into A Sparkling Sanctuary
+                    </p>
+                    
+                    <div class="space-y-3">
+                        <p class="text-lg text-cyan-50 font-semibold flex items-center space-x-2">
+                            <!-- <span class="inline-block w-2 h-2 bg-cyan-300 rounded-full"></span> -->
+                            <span>• 🏠 Homes • 🚗 Cars • 🏍️ Two-Wheelers • ✨ Complete Peace of Mind</span>
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-8">
+                        <a href="https://wa.me/919744718332" target="_blank" class="btn-primary text-white px-8 py-5 rounded-xl font-bold text-lg text-center transition flex items-center justify-center space-x-2 group">
+                            <span>💬 WhatsApp Now</span>
+                            <span class="group-hover:translate-x-1 transition">→</span>
+                        </a>
+                        <a href="tel:9744718332" class="btn-secondary px-8 py-5 rounded-xl font-bold text-lg text-center transition flex items-center justify-center space-x-2 group">
+                            <span>📞 Call Now</span>
+                            <span class="group-hover:translate-x-1 transition">→</span>
+                        </a>
+                    </div>
+                    
+                    <div class="pt-4 space-y-2">
+                        <p class="text-cyan-100 text-sm font-semibold">⭐ ⭐ ⭐ ⭐ ⭐</p>
+                        <p class="text-cyan-100 text-sm">Trusted by 500+ families in Ernakulam | Same-day service available</p>
+                    </div>
+                </div>
+                
+                <!-- Right Image Placeholder -->
+                <div class="hidden md:block relative">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl blur-3xl opacity-20"></div>
+                        <div class="glass-effect rounded-3xl overflow-hidden relative z-10 backdrop-blur-xl border-2 border-white border-opacity-20 hover:border-opacity-40 transition h-96">
+                            <img src="assets/hero-image.png" alt="Cleaning Services" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            <!-- Overlay Quote -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                            <div class="absolute inset-0 flex flex-col items-center justify-end pb-8 px-4 z-20">
+                                <p class="text-white text-2xl font-bold text-center drop-shadow-lg leading-relaxed">
+                                    "Cleanliness is the foundation of excellence"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SERVICES SECTION -->
+    <section id="services" class="py-16 md:py-28 bg-gradient-to-b from-gray-50 to-gray-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-block">
+                    <span class="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold mb-4 block">OUR EXPERTISE</span>
+                </div>
+                <h2 class="section-title text-4xl md:text-6xl font-black text-gray-900 mb-6">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Premium cleaning solutions tailored for your home, car, and two-wheeler</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1: House Cleaning -->
+                <div class="service-card rounded-2xl p-8 flex flex-col overflow-hidden">
+                    <!-- Image Section -->
+                    <div class="mb-6 w-full h-48 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl flex items-center justify-center overflow-hidden">
+                        <img src="assets/house-cleaning.png" alt="House Cleaning Service" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <!-- Content -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">House Cleaning</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">
+                        Full House Deep Cleaning
+                    </p>
+                    <div class="space-y-2 mb-6 text-sm">
+                        <p class="text-gray-700 font-medium">✓ Kitchen & Bathroom</p>
+                        <p class="text-gray-700 font-medium">✓ Floors & Surfaces</p>
+                        <p class="text-gray-700 font-medium">✓ Deep Sanitization</p>
+                    </div>
+                    <div class="text-2xl font-black bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent mb-6">
+                        ₹4,000 – ₹6,000
+                    </div>
+                    <a href="https://wa.me/919744718332" target="_blank" class="btn-primary text-white px-6 py-3 rounded-xl font-semibold text-center transition">
+                        Book Service
+                    </a>
+                </div>
+                
+                <!-- Service Card 2: Car Cleaning -->
+                <div class="service-card rounded-2xl p-8 flex flex-col transform hover:scale-105 overflow-hidden">
+                    <!-- Image Section -->
+                    <div class="mb-6 w-full h-48 bg-gradient-to-br from-red-100 to-orange-100 rounded-xl flex items-center justify-center overflow-hidden">
+                        <img src="assets/car-cleaning.png" alt="Car Cleaning Service" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <!-- Content -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Car Cleaning</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">
+                        Interior & Exterior Excellence
+                    </p>
+                    <div class="space-y-2 mb-6 text-sm">
+                        <p class="text-gray-700 font-medium">✓ Foam Wash</p>
+                        <p class="text-gray-700 font-medium">✓ Interior Detailing</p>
+                        <p class="text-gray-700 font-medium">✓ Shine & Polish</p>
+                    </div>
+                    <div class="text-2xl font-black bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent mb-6">
+                        ₹2,000 – ₹3,000
+                    </div>
+                    <a href="https://wa.me/919744718332" target="_blank" class="btn-primary text-white px-6 py-3 rounded-xl font-semibold text-center transition">
+                        Book Service
+                    </a>
+                </div>
+                
+                <!-- Service Card 3: Two Wheeler Cleaning -->
+                <div class="service-card rounded-2xl p-8 flex flex-col overflow-hidden">
+                    <!-- Image Section -->
+                    <div class="mb-6 w-full h-48 bg-gradient-to-br from-yellow-100 to-green-100 rounded-xl flex items-center justify-center overflow-hidden">
+                        <img src="assets/two-wheeler-cleaning.png" alt="Two Wheeler Cleaning Service" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <!-- Content -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Two Wheeler Cleaning</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">
+                        Full Body Care & Shine
+                    </p>
+                    <div class="space-y-2 mb-6 text-sm">
+                        <p class="text-gray-700 font-medium">✓ Full Body Wash</p>
+                        <p class="text-gray-700 font-medium">✓ Chrome Polish</p>
+                        <p class="text-gray-700 font-medium">✓ Scratch Protection</p>
+                    </div>
+                    <div class="text-2xl font-black bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent mb-6">
+                        ₹1,500 – ₹2,000
+                    </div>
+                    <a href="https://wa.me/919744718332" target="_blank" class="btn-primary text-white px-6 py-3 rounded-xl font-semibold text-center transition">
+                        Book Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-16 md:py-28 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full opacity-20 -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-full opacity-20 -ml-48 -mb-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-block">
+                    <span class="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold mb-4 block">WHY US?</span>
+                </div>
+                <h2 class="section-title text-4xl md:text-6xl font-black text-gray-900 mb-6">Why Choose DAZZLE CLEAN?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We deliver excellence every single time</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-box text-center group">
+                    <div class="w-24 h-24 rounded-full primary-gradient flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-2xl">
+                        <span class="text-5xl feature-icon">🏠</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Doorstep Service</h3>
+                    <p class="text-gray-600 text-sm">We come to you, no hassle. Quality service at your convenience.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-box text-center group">
+                    <div class="w-24 h-24 rounded-full primary-gradient flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-2xl">
+                        <span class="text-5xl feature-icon">👥</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Professional Staff</h3>
+                    <p class="text-gray-600 text-sm">Trained, experienced, and trustworthy cleaning experts.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-box text-center group">
+                    <div class="w-24 h-24 rounded-full primary-gradient flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-2xl">
+                        <span class="text-5xl feature-icon">💰</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Affordable Pricing</h3>
+                    <p class="text-gray-600 text-sm">Best rates in Ernakulam. Transparent pricing, no hidden charges.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-box text-center group">
+                    <div class="w-24 h-24 rounded-full primary-gradient flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-2xl">
+                        <span class="text-5xl feature-icon">⏰</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">On-Time Service</h3>
+                    <p class="text-gray-600 text-sm">Punctual and reliable. We respect your time.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-box text-center group">
+                    <div class="w-24 h-24 rounded-full primary-gradient flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-2xl">
+                        <span class="text-5xl feature-icon">🧪</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Safe Materials</h3>
+                    <p class="text-gray-600 text-sm">Eco-friendly & non-toxic cleaning solutions for your family.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-box text-center group">
+                    <div class="w-24 h-24 rounded-full primary-gradient flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-2xl">
+                        <span class="text-5xl feature-icon">⭐</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Guaranteed</h3>
+                    <p class="text-gray-600 text-sm">100% satisfaction guarantee with every service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="py-16 md:py-28 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <div class="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full opacity-30 -mr-48 transform -translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-block">
+                    <span class="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold mb-4 block">SIMPLE PROCESS</span>
+                </div>
+                <h2 class="section-title text-4xl md:text-6xl font-black text-gray-900 mb-6">How It Works</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Simple 4 steps to a perfectly clean space</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="step-number transform group-hover:rotate-12 group-hover:scale-110">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Contact Us</h3>
+                    <p class="text-gray-600 text-sm">Call or WhatsApp us your requirements</p>
+                </div>
+                
+                <!-- Arrow (hidden on mobile) -->
+                <div class="hidden md:flex items-center justify-center">
+                    <svg class="w-8 h-8 text-cyan-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="step-number transform group-hover:rotate-12 group-hover:scale-110">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Choose Service</h3>
+                    <p class="text-gray-600 text-sm">Select the cleaning service you need</p>
+                </div>
+                
+                <!-- Arrow (hidden on mobile) -->
+                <div class="hidden md:flex items-center justify-center">
+                    <svg class="w-8 h-8 text-cyan-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="step-number transform group-hover:rotate-12 group-hover:scale-110">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Doorstep Cleaning</h3>
+                    <p class="text-gray-600 text-sm">Our team arrives and cleans professionally</p>
+                </div>
+                
+                <!-- Arrow (hidden on mobile) -->
+                <div class="hidden md:flex items-center justify-center">
+                    <svg class="w-8 h-8 text-cyan-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="step-number transform group-hover:rotate-12 group-hover:scale-110">4</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Enjoy the Shine</h3>
+                    <p class="text-gray-600 text-sm">Relax and enjoy your sparkling clean space</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GALLERY SECTION - BEFORE & AFTER -->
+    <section id="gallery" class="py-16 md:py-28 bg-gradient-to-b from-gray-50 to-gray-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-block">
+                    <span class="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold mb-4 block">OUR WORK</span>
+                </div>
+                <h2 class="section-title text-4xl md:text-6xl font-black text-gray-900 mb-6">Before & After Gallery</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">See the transformation we bring to every cleaning project</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Gallery Item 1: House Cleaning -->
+                <div class="group">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
+                            <img src="assets/gallery-house-before.png" alt="House Cleaning Before & After" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">House Cleaning</h3>
+                            <p class="text-gray-600 text-sm">Complete transformation of living spaces with deep cleaning and sanitization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: Car Cleaning -->
+                <div class="group">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
+                            <img src="assets/gallery-car-before.png" alt="Car Cleaning Before & After" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Car Cleaning</h3>
+                            <p class="text-gray-600 text-sm">Professional interior and exterior detailing for spotless vehicles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: Bike Cleaning -->
+                <div class="group">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
+                            <img src="assets/gallery-bike-before.png" alt="Bike Cleaning Before & After" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Two Wheeler Cleaning</h3>
+                            <p class="text-gray-600 text-sm">Pristine shine and protection for your motorcycle and scooters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4: Interior Cleaning -->
+                <div class="group">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
+                            <img src="assets/gallery-interior-before.png" alt="Interior Cleaning Before & After" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Interior Deep Clean</h3>
+                            <p class="text-gray-600 text-sm">Comprehensive cleaning of interiors with attention to every detail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SERVICE AREA SECTION -->
+    <section id="service-area" class="py-16 md:py-28 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-20 -ml-48 -mt-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <!-- Left Content -->
+                <div>
+                    <div class="inline-block mb-4">
+                        <span class="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold">SERVICE AREA</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                        We Serve <span class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">Ernakulam</span> & Beyond
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                        We proudly serve <span class="font-bold text-gray-900">Ernakulam and nearby areas</span> with professional cleaning services that exceed expectations.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Whether you're in the heart of the city or the suburbs, we bring our expertise to your doorstep with the same quality and professionalism.
+                    </p>
+                    <div class="glass-effect rounded-2xl p-6 border-l-4 border-cyan-400 mb-8">
+                        <p class="font-bold text-gray-900 mb-4 text-lg">📍 Coverage Area:</p>
+                        <div class="space-y-3 text-gray-700">
+                            <p class="flex items-center"><span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>Kochi City Center & Suburbs</p>
+                            <p class="flex items-center"><span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>Kakkanad & Infopark</p>
+                            <p class="flex items-center"><span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>Fort Kochi & Mattancherry</p>
+                            <p class="flex items-center"><span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>All surrounding regions (10 km radius)</p>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 mb-6 border border-cyan-200">
+                        <p class="font-bold text-gray-900 mb-3">⏱️ Service Timings:</p>
+                        <p class="text-gray-700 font-medium">6:00 AM - 10:00 PM | 7 Days a Week</p>
+                        <p class="text-gray-600 text-sm mt-2">⭐ Same day service available for bulk bookings</p>
+                    </div>
+                    <a href="https://wa.me/919744718332" target="_blank" class="btn-primary text-white px-8 py-4 rounded-xl font-bold inline-block transition">
+                        Check Your Location →
+                    </a>
+                </div>
+                
+                <!-- Right - Google Map -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-3xl blur-3xl opacity-20"></div>
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <!-- Google Maps Embed -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.0858409999996!2d76.2674122!3d10.0188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d9f5f5f5f5f%3A0x0!2sErnakulam%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1704888888888" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0; border-radius: 1.5rem;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT & CTA SECTION -->
+    <section id="contact" class="relative py-20 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-cyan-900"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full opacity-20 -mr-48 -mt-48 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-500 to-pink-500 rounded-full opacity-10 -ml-48 -mb-48 blur-3xl"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-4 drop-shadow-lg">Ready to Shine? ✨</h2>
+                <p class="text-xl text-cyan-100 font-medium">Get your home, car, or bike cleaned today</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- WhatsApp Contact -->
+                <a href="https://wa.me/919744718332" target="_blank" class="contact-card glass-effect rounded-2xl p-10 text-center text-white transition group">
+                    <div class="mb-6 flex justify-center">
+                        <svg class="w-20 h-20 group-hover:scale-125 transition-transform duration-300" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3.01 1.01 4.32L2 22l5.89-1.01C9.26 21.67 10.59 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.74-.36-3.88-.99l-.28-.15-2.89.49.49-2.89-.15-.28C4.36 14.74 4 13.41 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm3.53-12.78l-.56-1.45c-.18-.46-.64-.59-1.09-.59-.45 0-.91.13-1.25.62-.34.49-.13 1.15.21 1.6l.15.19c.34.44.85.72 1.40.77.55.05 1.05-.17 1.45-.62l.19-.15c.34-.34.55-.80.44-1.27zm-3.03 5.22c-.55.06-1.09-.17-1.48-.62-.39-.45-.55-.97-.44-1.49.11-.52.56-.93 1.12-.99.56-.06 1.10.17 1.49.62.39.45.56.97.45 1.49-.11.52-.57.93-1.13.99z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-2">WhatsApp</h3>
+                    <p class="text-cyan-100 mb-6 font-medium">Chat with us instantly</p>
+                    <div class="inline-block bg-gradient-to-r from-green-400 to-green-500 text-white px-8 py-3 rounded-xl font-bold group-hover:shadow-lg transition">
+                        Message Now →
+                    </div>
+                </a>
+                
+                <!-- Call Contact -->
+                <a href="tel:9744718332" class="contact-card glass-effect rounded-2xl p-10 text-center text-white transition group">
+                    <div class="text-6xl mb-6 group-hover:scale-125 transition-transform duration-300">📞</div>
+                    <h3 class="text-3xl font-bold mb-2">Call Now</h3>
+                    <p class="text-cyan-100 mb-6 font-medium">Speak with our team</p>
+                    <div class="inline-block bg-gradient-to-r from-cyan-400 to-blue-400 text-white px-8 py-3 rounded-xl font-bold group-hover:shadow-lg transition">
+                        9744718332
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center glass-effect rounded-2xl p-8 backdrop-blur-sm">
+                <p class="text-cyan-100 text-lg font-medium mb-2">
+                    📍 Location: <span class="font-bold text-white">Ernakulam, Kochi</span>
+                </p>
+                <p class="text-cyan-200 text-sm">Available 24/7 | Weekdays & Weekends | Same Day Service Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-gray-950 text-gray-300 py-16 border-t border-cyan-500 border-opacity-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="primary-gradient w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">✨</span>
+                        </div>
+                        <span class="text-2xl font-black text-white">DAZZLE CLEAN</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Professional cleaning services for your home, car, and two-wheeler. Excellence guaranteed.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 transition font-medium">Services</a></li>
+                        <li><a href="#why-us" class="text-gray-400 hover:text-cyan-400 transition font-medium">Why Us</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-cyan-400 transition font-medium">How It Works</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-cyan-400 transition font-medium">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 transition font-medium">House Cleaning</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 transition font-medium">Car Cleaning</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 transition font-medium">Two Wheeler Cleaning</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 transition font-medium">Deep Sanitization</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Contact</h4>
+                    <div class="space-y-4 text-sm">
+                        <p>
+                            <span class="font-semibold text-gray-300">Phone:</span><br>
+                            <a href="tel:9744718332" class="text-gray-400 hover:text-cyan-400 transition">9744718332</a>
+                        </p>
+                        <p>
+                            <span class="font-semibold text-gray-300">Email:</span><br>
+                            <a href="mailto:dazzleclean2026@gmail.com" class="text-gray-400 hover:text-cyan-400 transition">alexanderthe2005@gmail.com</a>
+                        </p>
+                        <p>
+                            <span class="font-semibold text-gray-300">WhatsApp:</span><br>
+                            <a href="https://wa.me/919744718332" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">Chat Now →</a>
+                        </p>
+                        <p>
+                            <span class="font-semibold text-gray-300">Location:</span><br>
+                            Ernakulam, Kochi
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        &copy; 2026 DAZZLE CLEAN. All rights reserved. | Made with ✨ for a cleaner Ernakulam
+                    </p>
+                    <div class="flex space-x-8 text-sm">
+                        <a href="#" class="text-gray-500 hover:text-cyan-400 transition font-medium">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-cyan-400 transition font-medium">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show floating buttons only on mobile
+        const floatingWhatsapp = document.getElementById('floatingWhatsappNew');
+        const floatingCall = document.getElementById('floatingCall');
+        function toggleFloatingButtons() {
+            if (window.innerWidth < 768) {
+                floatingWhatsapp.style.display = 'flex';
+                floatingCall.style.display = 'flex';
+            } else {
+                floatingWhatsapp.style.display = 'none';
+                floatingCall.style.display = 'none';
+            }
+        }
+        
+        toggleFloatingButtons();
+        window.addEventListener('resize', toggleFloatingButtons);
+        
+        // Header scroll detection
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
